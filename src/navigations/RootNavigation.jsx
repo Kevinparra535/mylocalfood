@@ -11,12 +11,12 @@ import PropTypes from "prop-types";
 // Hooks
 
 // Screens
-import HomeScreen from "../screens/Home/HomeScreen";
 import LoginScreen from "../screens/Login/LoginScreen";
 
 // Componentes
 
 // Navigations
+import DashboardTabsNavigation from "./DashboardTabsNavigation";
 
 // Imagenes
 
@@ -51,14 +51,17 @@ const RootNavigation = () => {
   }
 
   return (
-    <Root.Navigator initialRouteName="LoginScreen">
-      {/* {user ? ( */}
-      <Root.Screen name="HomeScreen" component={HomeScreen} />
-      {/* ) : ( */}
-      {/* <> */}
+    <Root.Navigator
+      screenOptions={{
+        headerShown: false,
+        headerShadowVisible: false,
+      }}
+    >
+      <Root.Screen
+        name="DashboardTabsNavigation"
+        component={DashboardTabsNavigation}
+      />
       {/* <Root.Screen name="LoginScreen" component={LoginScreen} /> */}
-      {/* </> */}
-      {/* )} */}
     </Root.Navigator>
   );
 };
