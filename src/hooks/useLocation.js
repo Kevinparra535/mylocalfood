@@ -29,10 +29,8 @@ const useLocation = () => {
         });
         return;
       }
-      
-      const prevDataSaved = await AsyncStorage.getItem(STORAGE_MAP_KEY);
 
-      console.log("prevDataSaved ,", prevDataSaved);
+      const prevDataSaved = await AsyncStorage.getItem(STORAGE_MAP_KEY);
 
       if (prevDataSaved === null) {
         const location = await Location.getCurrentPositionAsync({});

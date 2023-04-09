@@ -38,9 +38,6 @@ const HomeScreen = () => {
   // Funciones
 
   // UseEffects
-  useEffect(() => {
-    console.log(loading, error, data);
-  }, [loading, error, data]);
 
   // Renders
   return (

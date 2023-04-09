@@ -2,7 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  HomeIcon,
+  StarIcon,
+  MapIcon,
+  ShareIcon,
+  UserCircleIcon,
+} from "react-native-heroicons/outline";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -12,6 +18,7 @@ import PropTypes from "prop-types";
 // Screens
 import HomeScreen from "../screens/Home/HomeScreen";
 import MapScreen from "../screens/Map/MapScreen";
+import Colors from "../assets/styles/Colors";
 
 // Componentes
 
@@ -44,13 +51,21 @@ const DashboardTabsNavigation = () => {
 
   // Renders
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      initialRouteName="HomeScreen"
+      activeColor={Colors.oscuro}
+      inactiveColor={Colors.bg.oscuro}
+      barStyle={{ backgroundColor: Colors.claro }}
+    >
       <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
           title: "Inicio",
           tabBarLabel: "Inicio",
+          tabBarIcon: ({ focused, color, size }) => (
+            <HomeIcon color={color} strokeWidth={1.8} size={size} />
+          ),
         }}
       />
 
@@ -60,6 +75,9 @@ const DashboardTabsNavigation = () => {
         options={{
           title: "Mapa",
           tabBarLabel: "Mapa",
+          tabBarIcon: ({ color, size }) => (
+            <MapIcon color={color} strokeWidth={1.5} size={size} />
+          ),
         }}
       />
     </Tab.Navigator>
