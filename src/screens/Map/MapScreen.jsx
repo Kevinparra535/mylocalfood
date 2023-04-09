@@ -1,15 +1,8 @@
 // Librerias
 import React, { useEffect, useState, useRef } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ActivityIndicator,
-  Image,
-  Alert,
-} from "react-native";
+import { View, StyleSheet, ActivityIndicator, Image } from "react-native";
 import MapView, { Marker, Callout, CalloutSubview } from "react-native-maps";
-import * as Location from "expo-location";
+import { useNavigation } from "@react-navigation/native";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -45,9 +38,9 @@ const MapScreen = () => {
   // Hooks
   const { loading, error, data } = useLocation();
   const mapRef = useRef(null);
+  const navigation = useNavigation();
 
   // Funciones
-
   const mapStyle = [
     {
       featureType: "poi",
@@ -58,6 +51,11 @@ const MapScreen = () => {
       ],
     },
   ];
+
+  const handleCallOut = (id) => {
+    console.log(id);
+    navigation.navigate("RestaurantDetailsScreen", { params: { id } });
+  };
 
   // UseEffects
   useEffect(() => {
@@ -81,14 +79,15 @@ const MapScreen = () => {
           style={{ flex: 1 }}
           ref={mapRef}
           showsScale={false}
+          initialRegion={data}
           showsTraffic={false}
           showsCompass={false}
           showsIndoors={false}
+          zoomTapEnabled={true}
           showsBuildings={false}
           showsUserLocation={true}
           customMapStyle={mapStyle}
           showsMyLocationButton={true}
-          initialRegion={data}
           showsPointsOfInterest={false}
           showsIndoorLevelPicker={false}
         >
@@ -120,9 +119,13 @@ const MapScreen = () => {
                   </View>
 
                   {/* Tooltip */}
-                  <Callout tooltip alphaHitTest style={styles.customView}>
+                  <Callout
+                    tooltip
+                    alphaHitTest
+                    style={styles.customView}
+                    onPress={() => handleCallOut(item.id)}
+                  >
                     <CustomCallOut
-                      id={item.id}
                       title={item.details.name}
                       stars={item.details.rating}
                       logo={item.details.images.logo}

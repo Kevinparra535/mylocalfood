@@ -17,12 +17,12 @@ import PropTypes from "prop-types";
 
 // Screens
 import HomeScreen from "../screens/Home/HomeScreen";
-import MapScreen from "../screens/Map/MapScreen";
 import Colors from "../assets/styles/Colors";
 
 // Componentes
 
 // Navigations
+import MapStackNavigation from "./MapStackNavigation";
 
 // Imagenes
 
@@ -70,8 +70,8 @@ const DashboardTabsNavigation = () => {
       />
 
       <Tab.Screen
-        name="MapScreen"
-        component={MapScreen}
+        name="MapStackNavigation"
+        component={MapStackNavigation}
         options={{
           title: "Mapa",
           tabBarLabel: "Mapa",

@@ -54,6 +54,7 @@ const CustomCallOut = ({ id, title, stars, logo }) => {
           resizeMethod="scale"
           source={{ uri: logo }}
         />
+
         <View style={styles.texts}>
           <Text style={styles.text}>{title}</Text>
           <Text style={styles.rating}>
@@ -86,6 +87,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 100,
+    borderWidth: 1,
   },
 
   bubble: {
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
   },
 
   texts: {
-    width: 160,
+    width: 200,
   },
 
   text: {
