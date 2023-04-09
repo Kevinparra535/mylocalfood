@@ -1,0 +1,163 @@
+[
+  {
+    "id": 0,
+    "details": {
+      "name": "Restaurante La Granja",
+      "shortName": "La Granja",
+      "description": "Un lugar acogedor en medio de la naturaleza, donde puedes disfrutar de deliciosas comidas caseras.",
+      "menu": {
+        "burgers": [
+          {
+            "name": "Hamburguesa",
+            "price": 7.99,
+            "image": "https://example.com/hamburguesa.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 20,
+            "offerTotalValue": 6.39
+          },
+          {
+            "name": "Cheeseburger",
+            "price": 8.99,
+            "image": "https://example.com/cheeseburger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": false,
+            "offerPercentage": 0,
+            "offerTotalValue": 0
+          },
+          {
+            "name": "Chicken Burger",
+            "price": 9.99,
+            "image": "https://example.com/chicken-burger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 15,
+            "offerTotalValue": 8.49
+          }
+        ],
+        "pizzas": [
+          {
+            "name": "Hamburguesa",
+            "price": 7.99,
+            "image": "https://example.com/hamburguesa.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 20,
+            "offerTotalValue": 6.39
+          }
+        ],
+        "salads": [
+          {
+            "name": "Hamburguesa",
+            "price": 7.99,
+            "image": "https://example.com/hamburguesa.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 20,
+            "offerTotalValue": 6.39
+          },
+          {
+            "name": "Cheeseburger",
+            "price": 8.99,
+            "image": "https://example.com/cheeseburger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": false,
+            "offerPercentage": 0,
+            "offerTotalValue": 0
+          },
+          {
+            "name": "Chicken Burger",
+            "price": 9.99,
+            "image": "https://example.com/chicken-burger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 15,
+            "offerTotalValue": 8.49
+          }
+        ],
+        "additional": [
+          {
+            "name": "Hamburguesa",
+            "price": 7.99,
+            "image": "https://example.com/hamburguesa.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 20,
+            "offerTotalValue": 6.39
+          },
+          {
+            "name": "Cheeseburger",
+            "price": 8.99,
+            "image": "https://example.com/cheeseburger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": false,
+            "offerPercentage": 0,
+            "offerTotalValue": 0
+          },
+          {
+            "name": "Chicken Burger",
+            "price": 9.99,
+            "image": "https://example.com/chicken-burger.png",
+            "flavors": ["sencillo", "doble"],
+            "currency": "COP",
+            "hasOffer": true,
+            "offerPercentage": 15,
+            "offerTotalValue": 8.49
+          }
+        ]
+      },
+      "images": {
+        "logo": "https://img.freepik.com/vector-gratis/concepto-logo-restaurante-retro_23-2148496814.jpg?w=826&t=st=1680988205~exp=1680988805~hmac=b02d701aa0b3492d1ae5c2cd3deba5e385b8f26b6fc74f260e5dd8fb5b099f84",
+        "photo1": "https://example.com/la-granja-photo1.png",
+        "photo2": "https://example.com/la-granja-photo2.png",
+        "photo3": "https://example.com/la-granja-photo3.png",
+        "photo4": "https://example.com/la-granja-photo4.png",
+        "photo5": "https://example.com/la-granja-photo5.png"
+      }
+    },
+    "location": {
+      "latitude": 3.8235036215168154,
+      "longitude": -76.5220061691495,
+      "latitudeDelta": 0.01,
+      "longitudeDelta": 0.01
+    }
+  },
+  {
+    "id": 1,
+    "details": {
+      "name": "Parrilla El Rancho",
+      "shortName": "El Rancho",
+      "description": "Un asador tradicional con los mejores cortes de carne a la parrilla, perfecto para los amantes de la carne.",
+      "menu": {
+        "burgers": {},
+        "pizzas": {},
+        "drinks": {},
+        "salads": {},
+        "additional": {}
+      },
+      "images": {
+        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
+        "photo1": "https://example.com/el-rancho-photo1.png",
+        "photo2": "https://example.com/el-rancho-photo2.png",
+        "photo3": "https://example.com/el-rancho-photo3.png",
+        "photo4": "https://example.com/el-rancho-photo4.png",
+        "photo5": "https://example.com/el-rancho-photo5.png"
+      }
+    },
+    "location": {
+      "latitude": 3.8219823267489432,
+      "longitude": -76.52224858800318,
+      "latitudeDelta": 0.01,
+      "longitudeDelta": 0.01
+    }
+  }
+]

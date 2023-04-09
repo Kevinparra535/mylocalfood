@@ -15,7 +15,6 @@ import HomeScreen from "../screens/Home/HomeScreen";
 import LoginScreen from "../screens/Login/LoginScreen";
 
 // Componentes
-import { auth, onAuthStateChanged } from "../config/firebaseConfig";
 
 // Navigations
 
@@ -35,7 +34,7 @@ const Root = createNativeStackNavigator();
 
 const RootNavigation = () => {
   // Estados
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
 
   // Contextos
@@ -45,18 +44,6 @@ const RootNavigation = () => {
   // Funciones
 
   // UseEffects
-  useEffect(() => {
-    const authSubscriber = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        setLoading(false);
-      } else {
-        setUser(null);
-        setLoading(false);
-      }
-    });
-    return authSubscriber;
-  }, []);
 
   // Renders
   if (loading) {
@@ -65,13 +52,13 @@ const RootNavigation = () => {
 
   return (
     <Root.Navigator initialRouteName="LoginScreen">
-      {user ? (
-        <Root.Screen name="HomeScreen" component={HomeScreen} />
-      ) : (
-        <>
-          <Root.Screen name="LoginScreen" component={LoginScreen} />
-        </>
-      )}
+      {/* {user ? ( */}
+      <Root.Screen name="HomeScreen" component={HomeScreen} />
+      {/* ) : ( */}
+      {/* <> */}
+      {/* <Root.Screen name="LoginScreen" component={LoginScreen} /> */}
+      {/* </> */}
+      {/* )} */}
     </Root.Navigator>
   );
 };

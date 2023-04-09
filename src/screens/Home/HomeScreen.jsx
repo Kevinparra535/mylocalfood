@@ -1,7 +1,14 @@
 // Librerias
 import React, { useEffect, useState, useRef } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
-import MapView, { Marker } from "react-native-maps";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+  Image,
+  Alert,
+} from "react-native";
+import MapView, { Marker, Callout, CalloutSubview } from "react-native-maps";
 import * as Location from "expo-location";
 import PropTypes from "prop-types";
 
@@ -12,6 +19,8 @@ import PropTypes from "prop-types";
 // Screens
 
 // Componentes
+import CustomCallOut from "../../components/Map/CustomCallOut";
+import temporalData from "../../jsons/businessMarkers.json";
 
 // Navigations
 
@@ -29,7 +38,7 @@ import PropTypes from "prop-types";
 
 const HomeScreen = () => {
   // Estados
-  const [location, setLocation] = useState({
+  const [userLocation, setUserLocation] = useState({
     loading: false,
     data: {},
     error: null,
@@ -42,13 +51,13 @@ const HomeScreen = () => {
 
   // Funciones
   const getLocationAsync = async () => {
-    setLocation({ loading: true, error: null });
+    setUserLocation({ loading: true, error: null });
 
     try {
       let { status } = await Location.requestForegroundPermissionsAsync();
 
       if (status !== "granted") {
-        setLocation({
+        setUserLocation({
           loading: false,
           error: "Permission to access location was denied",
         });
@@ -57,7 +66,7 @@ const HomeScreen = () => {
 
       let location = await Location.getCurrentPositionAsync({});
 
-      setLocation({
+      setUserLocation({
         loading: false,
         data: {
           latitude: location.coords ? location.coords.latitude : 37.78825,
@@ -67,7 +76,7 @@ const HomeScreen = () => {
         },
       });
     } catch (error) {
-      setLocation({ loading: false, error });
+      setUserLocation({ loading: false, error });
     }
   };
 
@@ -84,15 +93,15 @@ const HomeScreen = () => {
 
   // UseEffects
   useEffect(() => {
-    if (location.data && mapRef.current) {
+    if (userLocation.data && mapRef.current) {
       mapRef.current.animateToRegion({
-        latitude: location.data.latitude,
-        longitude: location.data.longitude,
+        latitude: userLocation.data.latitude,
+        longitude: userLocation.data.longitude,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
       });
     }
-  }, [location]);
+  }, [userLocation]);
 
   useEffect(() => {
     getLocationAsync();
@@ -101,7 +110,7 @@ const HomeScreen = () => {
   // Renders
   return (
     <>
-      {location.loading === true ? (
+      {userLocation.loading === true ? (
         <ActivityIndicator />
       ) : (
         <MapView
@@ -115,18 +124,49 @@ const HomeScreen = () => {
           showsUserLocation={true}
           customMapStyle={mapStyle}
           showsMyLocationButton={true}
-          initialRegion={location.data}
+          initialRegion={userLocation.data}
           showsPointsOfInterest={false}
           showsIndoorLevelPicker={false}
         >
-          {location && (
-            <Marker
-              title="My Location"
-              coordinate={{
-                latitude: location.data.latitude,
-                longitude: location.data.longitude,
-              }}
-            />
+          {temporalData && (
+            <>
+              {temporalData.map((item) => (
+                <Marker
+                  key={item.id}
+                  title={item.details.name}
+                  description={item.details.description}
+                  coordinate={{
+                    latitude: item.location.latitude,
+                    longitude: item.location.longitude,
+                  }}
+                >
+                  {/* Marcador */}
+                  <View style={styles.marker}>
+                    <Image
+                      resizeMode="cover"
+                      style={styles.logo}
+                      resizeMethod="scale"
+                      source={{ uri: item.details.images.logo }}
+                    />
+
+                    <Image
+                      style={styles.pin}
+                      source={require("../../assets/images/static/pin_marker.png")}
+                    />
+                  </View>
+
+                  {/* Tooltip */}
+                  <Callout tooltip alphaHitTest style={styles.customView}>
+                    <CustomCallOut
+                      id={item.id}
+                      title={item.details.name}
+                      stars={item.details.rating}
+                      logo={item.details.images.logo}
+                    />
+                  </Callout>
+                </Marker>
+              ))}
+            </>
           )}
         </MapView>
       )}
@@ -138,6 +178,21 @@ HomeScreen.propTypes = {};
 
 HomeScreen.defaultProps = {};
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  marker: {
+    alignItems: "center",
+  },
+
+  logo: {
+    position: "absolute",
+    top: -0,
+    zIndex: 2,
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+  },
+
+  pin: { width: 50, height: 50 },
+});
 
 export default HomeScreen;
