@@ -7,7 +7,6 @@ import {
   StarIcon,
   MapIcon,
   ShareIcon,
-  UserCircleIcon,
 } from "react-native-heroicons/outline";
 import PropTypes from "prop-types";
 
@@ -16,17 +15,17 @@ import PropTypes from "prop-types";
 // Hooks
 
 // Screens
-import HomeScreen from "../screens/Home/HomeScreen";
-import Colors from "../assets/styles/Colors";
 
 // Componentes
 
 // Navigations
+import HomeStackNavigation from "./HomeStackNavigation";
 import MapStackNavigation from "./MapStackNavigation";
 
 // Imagenes
 
 // Estilos
+import Colors from "../assets/styles/Colors";
 
 /**
  * Descripción: La descripción de por qué estamos haciendo este componente y que resuelve.
@@ -58,8 +57,8 @@ const DashboardTabsNavigation = () => {
       barStyle={{ backgroundColor: Colors.claro }}
     >
       <Tab.Screen
-        name="HomeScreen"
-        component={HomeScreen}
+        name="HomeStackNavigation"
+        component={HomeStackNavigation}
         options={{
           title: "Inicio",
           tabBarLabel: "Inicio",

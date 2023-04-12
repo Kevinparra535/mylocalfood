@@ -47,34 +47,10 @@ const ResturantsList = () => {
   // Contextos
 
   // Hooks
-  const animationProgress = useRef(new Animated.Value(0));
 
   // Funciones
-  const ListEmptyItem = () => {
-    return (
-      <View style={styles.emptyItem}>
-        <Lottie
-          loop
-          style={styles.lottie}
-          progress={animationProgress.current}
-          source={require("../../assets/animations/empty_lottie.json")}
-        />
-        <Text style={styles.emptyItem.text}>No hay elementos</Text>
-      </View>
-    );
-  };
 
   // UseEffects
-  useEffect(() => {
-    if (!temporalData.length) {
-      Animated.timing(animationProgress.current, {
-        toValue: 1,
-        duration: 5000,
-        easing: Easing.linear,
-        useNativeDriver: false,
-      }).start();
-    }
-  }, [temporalData]);
 
   // Renders
   return (
@@ -88,19 +64,14 @@ const ResturantsList = () => {
       </View>
 
       <FlatList
-        data={temporalData}
         numColumns={1}
-        // onEndReached={!isLoading && isNext && loadMore}
+        data={temporalData}
+        scrollEnabled={false}
         onEndReachedThreshold={0.1}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => String(item.id)}
+        contentContainerStyle={styles.flatListContentContainer}
         renderItem={({ item }) => <ResturantCards item={item} />}
-        contentContainerStyle={
-          temporalData.length
-            ? styles.flatListContentContainer
-            : styles.flatListContentContainer.empty
-        }
-        ListEmptyComponent={ListEmptyItem}
       />
     </View>
   );
@@ -113,6 +84,7 @@ ResturantsList.defaultProps = {};
 const styles = StyleSheet.create({
   resturant: {
     padding: Spacings.space,
+    flex: 1,
     marginTop: Spacings.space,
   },
 
@@ -141,31 +113,12 @@ const styles = StyleSheet.create({
   },
 
   flatListContentContainer: {
-    paddingHorizontal: 15,
-
-    empty: {
-      paddingHorizontal: 15,
-      height: "100%",
-    },
+    flex: 1,
   },
 
   spinner: {
     marginVertical: Platform.OS === "android" ? 20 : 10,
     color: "#AEAEAE",
-  },
-
-  emptyItem: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-
-    text: {
-      fontFamily: "poppins-semibold",
-      fontSize: 25,
-      textAlign: "center",
-    },
   },
 
   lottie: {

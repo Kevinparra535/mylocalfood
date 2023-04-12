@@ -1,12 +1,12 @@
 // Librerias
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Image, Text, StyleSheet, Pressable } from "react-native";
 import {
   CheckBadgeIcon,
   StarIcon,
   MapPinIcon,
 } from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -35,21 +35,35 @@ import Fonts from "../../assets/styles/Fonts";
  * Bugs: Qué bugs se han presentado y como se solucionan.
  */
 
-const ResturantCards = () => {
+const ResturantCards = ({ item }) => {
   // Estados
 
   // Contextos
 
   // Hooks
+  const navigation = useNavigation();
 
   // Funciones
+  const handleClick = () => {
+    navigation.navigate("RestaurantDetailsScreen", { id: item.id });
+  };
 
   // UseEffects
+  useEffect(() => {
+    console.log(item);
+  }, [item]);
 
   // Renders
   return (
-    <View style={styles.resturantCard}>
-      <View style={styles.resturantImage}></View>
+    <Pressable onPress={handleClick} style={styles.resturantCard}>
+      <View style={styles.resturantImage}>
+        <Image
+          resizeMode="cover"
+          resizeMethod="auto"
+          style={styles.image}
+          source={{ uri: item.details.images[0].uri }}
+        />
+      </View>
 
       <View style={styles.resturantTitle}>
         <View
@@ -59,8 +73,8 @@ const ResturantCards = () => {
             flexDirection: "row",
           }}
         >
-          <Text style={styles.title}>Nombre del restaurante </Text>
-          <CheckBadgeIcon color={Colors.variants.two} size={20} />
+          <Text style={styles.title}>{item.details.name} </Text>
+          <CheckBadgeIcon color={Colors.variants.two} size={15} />
         </View>
 
         <View style={styles.stars}>
@@ -79,7 +93,7 @@ const ResturantCards = () => {
           Abierto
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -102,6 +116,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 100,
     backgroundColor: Colors.oscuro,
+  },
+
+  image: {
+    width: "100%",
+    height: "100%",
   },
 
   resturantTitle: {

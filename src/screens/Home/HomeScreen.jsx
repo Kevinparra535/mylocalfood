@@ -5,12 +5,12 @@ import {
   Text,
   Image,
   Pressable,
-  ScrollView,
   StyleSheet,
+  ScrollView,
+  SafeAreaView,
   ActivityIndicator,
 } from "react-native";
-import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -34,6 +34,7 @@ import AdsSlider from "../../components/Home/AdsSlider";
 import Spacings from "../../assets/styles/Spacings";
 import Fonts from "../../assets/styles/Fonts";
 import Colors from "../../assets/styles/Colors";
+import { Platform } from "react-native";
 
 /**
  * Descripción: La descripción de por qué estamos haciendo este componente y que resuelve.
@@ -50,19 +51,27 @@ const HomeScreen = () => {
 
   // Hooks
   const { loading, error, data } = useLocation();
+  const insets = useSafeAreaInsets();
 
   // Funciones
 
   // UseEffects
-  console.log(data);
 
   // Renders
   return (
-    <SafeAreaView>
+    <View style={{ flex: 1 }}>
       {loading === true ? (
         <ActivityIndicator />
       ) : (
-        <ScrollView>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ flexGrow: 1 }}
+          style={{
+            flex: 1,
+            marginTop: insets.top,
+            marginBottom: Platform.OS === "android" ? insets.bottom : 0,
+          }}
+        >
           <View style={styles.header}>
             <View style={styles.userInfo}>
               <Image
@@ -98,7 +107,7 @@ const HomeScreen = () => {
           <ResturantsList />
         </ScrollView>
       )}
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -108,7 +117,7 @@ HomeScreen.defaultProps = {};
 
 const styles = StyleSheet.create({
   header: {
-    paddingVertical: Spacings.space_half,
+    paddingVertical: Spacings.space,
     paddingHorizontal: Spacings.space,
     alignItems: "center",
     justifyContent: "space-between",
