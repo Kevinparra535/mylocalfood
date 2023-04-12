@@ -1,6 +1,8 @@
 // Librerias
 import React, { useEffect, useState } from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet } from "react-native";
+import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
+import getOpacity from "../../helpers/getOpacity";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -29,15 +31,19 @@ import Spacings from "../../assets/styles/Spacings";
  */
 
 const InputsForms = ({
-  value,
   name,
-  onBlur,
   error,
-  autoCapitalize,
-  secureTextEntry,
+  value,
+  icon,
+  onBlur,
+  iconSize,
+  iconColor,
+  inputMode,
+  placeholder,
   onChangeText,
   keyboardType,
-  placeholder,
+  autoCapitalize,
+  secureTextEntry,
 }) => {
   // Estados
 
@@ -51,23 +57,38 @@ const InputsForms = ({
 
   // Renders
   return (
-    <TextInput
-      name={name}
-      value={value}
-      onBlur={onBlur}
-      placeholder={placeholder}
-      style={error ? styles.loginInputError : styles.loginInput}
-      keyboardType={keyboardType}
-      onChangeText={onChangeText}
-      autoCapitalize={autoCapitalize}
-      secureTextEntry={secureTextEntry}
-      placeholderTextColor={error ? Colors.alerts.error : "gray"}
-    />
+    <View style={styles.inputContainer}>
+      {icon && (
+        <MagnifyingGlassIcon
+          style={styles.iconStyle}
+          size={iconSize}
+          color={iconColor}
+        />
+      )}
+
+      <TextInput
+        name={name}
+        value={value}
+        onBlur={onBlur}
+        placeholder={placeholder}
+        keyboardType={keyboardType}
+        inputMode={inputMode}
+        onChangeText={onChangeText}
+        style={styles.input}
+        autoCapitalize={autoCapitalize}
+        secureTextEntry={secureTextEntry}
+        placeholderTextColor={Colors.bg.oscuro}
+      />
+    </View>
   );
 };
 
 InputsForms.propTypes = {
   name: PropTypes.string,
+  error: PropTypes.object,
+  icon: PropTypes.bool,
+  iconSize: PropTypes.number,
+  iconColor: PropTypes.string,
   placeholder: PropTypes.string,
   keyboardType: PropTypes.string,
   autoCapitalize: PropTypes.string,
@@ -76,6 +97,10 @@ InputsForms.propTypes = {
 
 InputsForms.defaultProps = {
   name: "",
+  error: null,
+  icon: false,
+  iconSize: 15,
+  iconColor: "gray",
   placeholder: "",
   keyboardType: "default",
   autoCapitalize: "none",
@@ -83,28 +108,43 @@ InputsForms.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  loginInput: {
-    paddingVertical:
-      Platform.OS === "android" ? Spacings.space : Spacings.space_x2,
+  iconStyle: {
+    marginRight: Spacings.space,
+  },
+
+  inputContainer: {
     paddingHorizontal: Spacings.space_x2,
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
     marginBottom: Spacings.space,
     width: "100%",
-    ...Fonts.bodyText,
     borderWidth: 1,
     borderColor: Colors.variants.one,
     borderRadius: Spacings.space,
+    backgroundColor: getOpacity(Colors.variants.one, 0.1),
   },
 
-  loginInputError: {
-    paddingVertical:
-      Platform.OS === "android" ? Spacings.space : Spacings.space_x2,
+  inputContainerError: {
     paddingHorizontal: Spacings.space_x2,
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
     marginBottom: Spacings.space,
     width: "100%",
-    ...Fonts.bodyText,
     borderWidth: 1,
     borderColor: Colors.alerts.error,
     borderRadius: Spacings.space,
+    backgroundColor: getOpacity(Colors.variants.one, 0.1),
+  },
+
+  input: {
+    paddingVertical:
+      Platform.OS === "android" ? Spacings.space : Spacings.space_x2,
+    paddingHorizontal: Spacings.space,
+    width: "90%",
+    ...Fonts.bodyText,
+    fontSize: 12,
   },
 });
 

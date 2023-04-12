@@ -42,7 +42,6 @@ const CustomCallOut = ({ id, title, stars, logo }) => {
   // Funciones
 
   // UseEffects
-  useEffect(() => {}, []);
 
   // Renders
   return (
@@ -88,6 +87,7 @@ const styles = StyleSheet.create({
     height: 30,
     borderRadius: 100,
     borderWidth: 1,
+    backgroundColor: "red",
   },
 
   bubble: {
@@ -103,7 +103,8 @@ const styles = StyleSheet.create({
   },
 
   texts: {
-    width: 200,
+    width: 150,
+    borderWidth: 1,
   },
 
   text: {

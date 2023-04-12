@@ -1,6 +1,15 @@
 // Librerias
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  ActivityIndicator,
+} from "react-native";
+import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PropTypes from "prop-types";
 
@@ -12,12 +21,19 @@ import useLocation from "../../hooks/useLocation";
 // Screens
 
 // Componentes
+import CategoriesSlider from "../../components/Home/CategoriesSlider";
+import ResturantsList from "../../components/Home/ResturantsList";
+import InputsForms from "../../components/Forms/InputsForms";
+import AdsSlider from "../../components/Home/AdsSlider";
 
 // Navigations
 
 // Imagenes
 
 // Estilos
+import Spacings from "../../assets/styles/Spacings";
+import Fonts from "../../assets/styles/Fonts";
+import Colors from "../../assets/styles/Colors";
 
 /**
  * Descripción: La descripción de por qué estamos haciendo este componente y que resuelve.
@@ -38,6 +54,7 @@ const HomeScreen = () => {
   // Funciones
 
   // UseEffects
+  console.log(data);
 
   // Renders
   return (
@@ -45,10 +62,41 @@ const HomeScreen = () => {
       {loading === true ? (
         <ActivityIndicator />
       ) : (
-        <View>
-          <Text>Home</Text>
-          <Text>{data.address}</Text>
-        </View>
+        <ScrollView>
+          <View style={styles.header}>
+            <View style={styles.userInfo}>
+              <Image
+                resizeMode="cover"
+                resizeMethod="auto"
+                style={styles.photoProfile}
+                source={require("../../assets/images/static/temporalAvatar.webp")}
+              />
+              <View style={styles.userLocation}>
+                <Text style={styles.label}>Ubicacion actual:</Text>
+                <Text style={styles.userAddress}>{data.address}</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.searchBar}>
+            <InputsForms
+              icon
+              error={null}
+              iconSize={18}
+              name="search"
+              inputMode="search"
+              secureTextEntry={false}
+              iconColor={Colors.brand.primary}
+              placeholder="Buscar por comida o restaurante..."
+            />
+          </View>
+
+          <CategoriesSlider />
+
+          <AdsSlider />
+
+          <ResturantsList />
+        </ScrollView>
       )}
     </SafeAreaView>
   );
@@ -58,6 +106,46 @@ HomeScreen.propTypes = {};
 
 HomeScreen.defaultProps = {};
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  header: {
+    paddingVertical: Spacings.space_half,
+    paddingHorizontal: Spacings.space,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+
+  userInfo: {
+    alignItems: "center",
+    flexDirection: "row",
+  },
+
+  photoProfile: {
+    marginRight: 10,
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+  },
+
+  label: {
+    ...Fonts.bodyText,
+    fontSize: 10,
+    lineHeight: 16,
+  },
+
+  userAddress: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    ...Fonts.bodyText,
+    fontSize: 12,
+    lineHeight: 20,
+  },
+
+  searchBar: {
+    padding: Spacings.space,
+  },
+});
 
 export default HomeScreen;

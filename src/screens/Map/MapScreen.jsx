@@ -53,8 +53,7 @@ const MapScreen = () => {
   ];
 
   const handleCallOut = (id) => {
-    console.log(id);
-    navigation.navigate("RestaurantDetailsScreen", { params: { id } });
+    navigation.navigate("RestaurantDetailsScreen", { id });
   };
 
   // UseEffects
@@ -109,7 +108,7 @@ const MapScreen = () => {
                       resizeMode="cover"
                       style={styles.logo}
                       resizeMethod="scale"
-                      source={{ uri: item.details.images.logo }}
+                      source={{ uri: item.details.logo }}
                     />
 
                     <Image

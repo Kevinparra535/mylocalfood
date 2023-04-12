@@ -1,17 +1,17 @@
 const Colors = {
   brand: {
-    primary: "#FF8724",
+    primary: "#D1403B",
     secondary: "#C4C4C4",
   },
 
   variants: {
     one: "#b2b2b2",
-    two: "#F24E1E",
-    three: "#262626",
+    two: "#276EC4",
+    three: "#F28729",
   },
 
   alerts: {
-    check: "#38CB89",
+    check: "#12992B",
     error: "#BF1214",
   },
 

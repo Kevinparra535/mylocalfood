@@ -29,7 +29,6 @@ const useLocation = () => {
         });
         return;
       }
-
       const prevDataSaved = await AsyncStorage.getItem(STORAGE_MAP_KEY);
 
       if (prevDataSaved === null) {
@@ -47,7 +46,7 @@ const useLocation = () => {
 
         const address =
           result.length > 0
-            ? `${result[0].street} #${result[0].streetNumber}, ${result[0].city}, ${result[0].region}, ${result[0].country}`
+            ? `${result[0].street} #${result[0].streetNumber}, ${result[0].city}`
             : "No se encontró la dirección";
 
         setUserLocation({
