@@ -29,6 +29,35 @@
     }
   },
   {
+    "id": 6,
+    "category": "salads",
+    "name": "Ensalada con verduras",
+    "image": "https://img.freepik.com/foto-gratis/vista-superior-sabrosa-ensalada-verduras_23-2148515491.jpg?w=826&t=st=1681412586~exp=1681413186~hmac=507de9a7e6ec05d3f926e85f735a6f9bcbbaf6e92f7a0ea322d9037dcf190186",
+    "price": {
+      "normal": {
+        "value": 18000,
+        "hasOffer": true,
+        "offerPercentage": 10,
+        "offerTotalValue": 16200
+      }
+    },
+    "averageRating": 4.3,
+    "resturant": {
+      "id": 2,
+      "details": {
+        "name": "El Rancho",
+        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
+        "averageRating": 3.5
+      },
+      "location": {
+        "latitude": 3.8219823267489432,
+        "longitude": -76.52224858800318,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
     "id": 2,
     "category": "pizza",
     "name": "Pizza Margarita",
@@ -153,35 +182,6 @@
       }
     },
     "averageRating": 4.5,
-    "resturant": {
-      "id": 2,
-      "details": {
-        "name": "El Rancho",
-        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
-        "averageRating": 3.5
-      },
-      "location": {
-        "latitude": 3.8219823267489432,
-        "longitude": -76.52224858800318,
-        "latitudeDelta": 0.01,
-        "longitudeDelta": 0.01
-      }
-    }
-  },
-  {
-    "id": 6,
-    "category": "salads",
-    "name": "Ensalada con verduras",
-    "image": "https://img.freepik.com/foto-gratis/vista-superior-sabrosa-ensalada-verduras_23-2148515491.jpg?w=826&t=st=1681412586~exp=1681413186~hmac=507de9a7e6ec05d3f926e85f735a6f9bcbbaf6e92f7a0ea322d9037dcf190186",
-    "price": {
-      "normal": {
-        "value": 18000,
-        "hasOffer": true,
-        "offerPercentage": 10,
-        "offerTotalValue": 16200
-      }
-    },
-    "averageRating": 4.3,
     "resturant": {
       "id": 2,
       "details": {

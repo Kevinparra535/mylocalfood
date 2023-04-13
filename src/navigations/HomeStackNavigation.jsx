@@ -16,6 +16,7 @@ import RestaurantDetailsScreen from "../screens/Home/RestaurantDetailsScreen";
 // Componentes
 
 // Navigations
+import SearchStackNavigation from "./SearchStackNavigation";
 
 // Imagenes
 
@@ -55,6 +56,11 @@ const HomeStackNavigation = () => {
       <HomeStack.Screen
         name="RestaurantDetailsScreen"
         component={RestaurantDetailsScreen}
+      />
+
+      <HomeStack.Screen
+        name="SearchStackNavigation"
+        component={SearchStackNavigation}
       />
     </HomeStack.Navigator>
   );

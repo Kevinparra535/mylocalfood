@@ -35,6 +35,11 @@ const Fonts = {
     color: Colors.claro,
   },
 
+  cards: {
+    fontSize: 15,
+    fontFamily: 'poppins-medium',
+  },
+
   links: {
     fontSize: 15,
     fontFamily: 'poppins',

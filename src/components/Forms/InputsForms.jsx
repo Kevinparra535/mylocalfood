@@ -36,7 +36,9 @@ const InputsForms = ({
   value,
   icon,
   onBlur,
+  onFocus,
   iconSize,
+  readOnly,
   iconColor,
   inputMode,
   placeholder,
@@ -70,11 +72,13 @@ const InputsForms = ({
         name={name}
         value={value}
         onBlur={onBlur}
+        onFocus={onFocus}
+        readOnly={readOnly}
+        style={styles.input}
+        inputMode={inputMode}
         placeholder={placeholder}
         keyboardType={keyboardType}
-        inputMode={inputMode}
         onChangeText={onChangeText}
-        style={styles.input}
         autoCapitalize={autoCapitalize}
         secureTextEntry={secureTextEntry}
         placeholderTextColor={Colors.bg.oscuro}
@@ -84,9 +88,11 @@ const InputsForms = ({
 };
 
 InputsForms.propTypes = {
+  icon: PropTypes.bool,
   name: PropTypes.string,
   error: PropTypes.object,
-  icon: PropTypes.bool,
+  onFocus: PropTypes.func,
+  readOnly: PropTypes.bool,
   iconSize: PropTypes.number,
   iconColor: PropTypes.string,
   placeholder: PropTypes.string,
@@ -97,11 +103,13 @@ InputsForms.propTypes = {
 
 InputsForms.defaultProps = {
   name: "",
-  error: null,
   icon: false,
+  error: null,
   iconSize: 15,
-  iconColor: "gray",
+  readOnly: false,
   placeholder: "",
+  iconColor: "gray",
+  onFocus: () => null,
   keyboardType: "default",
   autoCapitalize: "none",
   secureTextEntry: true,
@@ -141,7 +149,6 @@ const styles = StyleSheet.create({
     paddingVertical:
       Platform.OS === "android" ? Spacings.space : Spacings.space_x2,
     paddingHorizontal: Spacings.space,
-    width: "90%",
     ...Fonts.bodyText,
     fontSize: 14,
   },

@@ -4,10 +4,11 @@ import {
   View,
   Text,
   Image,
-  Pressable,
+  Platform,
   StyleSheet,
   ScrollView,
   ActivityIndicator,
+  Pressable,
 } from "react-native";
 import {
   SafeAreaView,
@@ -25,7 +26,7 @@ import useLocation from "../../hooks/useLocation";
 // Componentes
 import CategoriesSlider from "../../components/Home/CategoriesSlider";
 import ResturantsList from "../../components/Home/ResturantsList";
-import InputsForms from "../../components/Forms/InputsForms";
+import SearchBar from "../../components/Search/SearchBar";
 import AdsSlider from "../../components/Home/AdsSlider";
 import FoodLists from "../../components/Home/FoodLists";
 
@@ -37,7 +38,6 @@ import FoodLists from "../../components/Home/FoodLists";
 import Spacings from "../../assets/styles/Spacings";
 import Fonts from "../../assets/styles/Fonts";
 import Colors from "../../assets/styles/Colors";
-import { Platform } from "react-native";
 
 /**
  * Descripción: La descripción de por qué estamos haciendo este componente y que resuelve.
@@ -47,7 +47,7 @@ import { Platform } from "react-native";
  * Bugs: Qué bugs se han presentado y como se solucionan.
  */
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   // Estados
 
   // Contextos
@@ -94,18 +94,11 @@ const HomeScreen = () => {
 
           <AdsSlider />
 
-          <View style={styles.searchBar}>
-            <InputsForms
-              icon
-              error={null}
-              iconSize={18}
-              name="search"
-              inputMode="search"
-              secureTextEntry={false}
-              iconColor={Colors.brand.primary}
-              placeholder="Buscar por comida o restaurante..."
-            />
-          </View>
+          <SearchBar
+            overlay
+            readOnly
+            onPressOverlay={() => navigation.navigate("SearchStackNavigation")}
+          />
 
           <CategoriesSlider />
 
@@ -157,10 +150,6 @@ const styles = StyleSheet.create({
     ...Fonts.bodyText,
     fontSize: 12,
     lineHeight: 20,
-  },
-
-  searchBar: {
-    paddingHorizontal: Spacings.space,
   },
 });
 
