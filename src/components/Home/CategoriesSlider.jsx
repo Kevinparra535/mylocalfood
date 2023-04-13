@@ -51,13 +51,13 @@ const CategoriesSlider = () => {
   // Renders
   return (
     <View style={styles.categories}>
-      <View style={styles.categoriesHeader}>
+      {/* <View style={styles.categoriesHeader}>
         <Text style={styles.titles}>Categorias</Text>
 
         <Pressable>
           <Text style={styles.link}>Ver todos</Text>
         </Pressable>
-      </View>
+      </View> */}
 
       {/* Slider */}
       <ScrollView
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
     borderRadius: 100,
+    backgroundColor: getOpacity(Colors.variants.one, 0.2)
   },
 
   categoriesItemSelected: {

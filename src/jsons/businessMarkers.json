@@ -6,117 +6,670 @@
       "shortName": "La Granja",
       "description": "Un lugar acogedor en medio de la naturaleza, donde puedes disfrutar de deliciosas comidas caseras.",
       "logo": "https://img.freepik.com/vector-gratis/concepto-logo-restaurante-retro_23-2148496814.jpg?w=826&t=st=1680988205~exp=1680988805~hmac=b02d701aa0b3492d1ae5c2cd3deba5e385b8f26b6fc74f260e5dd8fb5b099f84",
+      "averageRating": 4.0,
       "menu": {
         "burgers": [
           {
-            "name": "Hamburguesa",
-            "price": 7.99,
+            "id": 1,
+            "category": "burgers",
+            "name": "Hamburguesa Sencilla",
             "image": "https://example.com/hamburguesa.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 20,
-            "offerTotalValue": 6.39
+            "price": {
+              "normal": {
+                "value": 25000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.0,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 2
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 1
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 1
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 2
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 3
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "¡Me encantó la hamburguesa! La carne estaba jugosa y los ingredientes frescos.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Buena hamburguesa, aunque la carne estaba un poco seca.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario3",
+                "comment": "No fue lo que esperaba. El pan estaba duro y la carne tenía poco sabor.",
+                "rating": 2
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una hamburguesa deliciosa, definitivamente volveré por más.",
+                "rating": 5
+              }
+            ]
           },
           {
-            "name": "Cheeseburger",
-            "price": 8.99,
-            "image": "https://example.com/cheeseburger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": false,
-            "offerPercentage": 0,
-            "offerTotalValue": 0
+            "id": 2,
+            "category": "burgers",
+            "name": "Hamburguesa Doble",
+            "image": "https://example.com/hamburguesa_doble.png",
+            "price": {
+              "normal": {
+                "value": 30000,
+                "hasOffer": false,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.5,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 3
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 2
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 2
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 2
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 3
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "¡La mejor hamburguesa que he probado! La carne estaba jugosa y los ingredientes bien equilibrados.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Una hamburguesa muy sabrosa, perfecta para los amantes de la carne.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Demasiado grande para mi gusto, pero la carne estaba bien cocida.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me encantó la combinación de sabores, definitivamente la recomiendo.",
+                "rating": 5
+              }
+            ]
           },
           {
-            "name": "Chicken Burger",
-            "price": 9.99,
-            "image": "https://example.com/chicken-burger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 15,
-            "offerTotalValue": 8.49
+            "id": 3,
+            "category": "burgers",
+            "name": "Big Bacon",
+            "image": "https://example.com/big_bacon.png",
+            "price": {
+              "normal": {
+                "value": 25000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 2
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 1
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 1
+              },
+              {
+                "name": "Tocino",
+                "quantity": 3
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 1
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 2
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Me encanta el sabor del tocino en esta hamburguesa, ¡muy deliciosa!",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "La combinación de carne, queso y tocino es perfecta. Sin duda, la mejor opción para los amantes del tocino.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Un poco grasosa para mi gusto, pero el sabor es bueno.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Esta hamburguesa es mi favorita, el tocino le da un toque especial.",
+                "rating": 5
+              }
+            ]
           }
         ],
         "pizzas": [
           {
-            "name": "Hamburguesa",
-            "price": 7.99,
-            "image": "https://example.com/hamburguesa.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 20,
-            "offerTotalValue": 6.39
+            "id": 1,
+            "category": "pizza",
+            "name": "Pizza Margarita",
+            "image": "https://example.com/pizza_margarita.png",
+            "price": {
+              "small": {
+                "value": 16000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "medium": {
+                "value": 22000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "large": {
+                "value": 28000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.5,
+            "ingredients": [
+              {
+                "name": "Masa de pizza",
+                "quantity": 1
+              },
+              {
+                "name": "Salsa de tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Queso mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Albahaca fresca",
+                "quantity": 1
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La pizza Margarita es clásica y deliciosa. La masa es fina y crujiente.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Muy buena pizza, la salsa de tomate y el queso mozzarella combinan perfectamente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La pizza Margarita es simple pero sabrosa. Me gusta la albahaca fresca encima.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una de mis pizzas favoritas, siempre la pido con extra de queso mozzarella.",
+                "rating": 5
+              }
+            ],
+            "sizes": ["small", "medium", "large"]
+          },
+          {
+            "id": 2,
+            "category": "pizza",
+            "name": "Pizza de Pepperoni",
+            "image": "https://example.com/pizza_pepperoni.png",
+            "price": {
+              "small": {
+                "value": 16000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "medium": {
+                "value": 22000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "large": {
+                "value": 28000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Masa de pizza",
+                "quantity": 1
+              },
+              {
+                "name": "Salsa de tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Queso mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Pepperoni",
+                "quantity": 12
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La pizza de pepperoni es clásica y sabrosa. Me encanta el sabor del pepperoni.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Buena pizza de pepperoni, la masa es delgada y crujiente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La pizza de pepperoni es perfecta para los amantes de la carne. ¡Deliciosa!",
+                "rating": 5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una pizza clásica que nunca falla. El pepperoni le da un sabor especial.",
+                "rating": 4
+              }
+            ],
+            "sizes": ["small", "medium", "large"]
           }
         ],
         "salads": [
           {
-            "name": "Hamburguesa",
-            "price": 7.99,
-            "image": "https://example.com/hamburguesa.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 20,
-            "offerTotalValue": 6.39
+            "id": 1,
+            "category": "salads",
+            "name": "Ensalada César",
+            "image": "https://example.com/ensalada_cesar.png",
+            "price": {
+              "normal": {
+                "value": 18000,
+                "hasOffer": true,
+                "offerPercentage": 10,
+                "offerTotalValue": 16200
+              }
+            },
+            "averageRating": 4.3,
+            "ingredients": [
+              {
+                "name": "Lechuga romana",
+                "quantity": 1
+              },
+              {
+                "name": "Pollo a la parrilla",
+                "quantity": 1
+              },
+              {
+                "name": "Queso parmesano rallado",
+                "quantity": 0.5
+              },
+              {
+                "name": "Salsa César",
+                "quantity": 1
+              },
+              {
+                "name": "Crutones",
+                "quantity": 0.5
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La ensalada César es deliciosa, me encanta la salsa y los crutones.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Muy buena ensalada, el pollo está bien sazonado y la salsa César es increíble.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Una ensalada clásica que siempre es una buena opción. Los crutones le dan un toque crujiente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me gusta mucho la ensalada César, la lechuga romana es fresca y el queso parmesano la complementa bien.",
+                "rating": 4.5
+              }
+            ]
           },
           {
-            "name": "Cheeseburger",
-            "price": 8.99,
-            "image": "https://example.com/cheeseburger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": false,
-            "offerPercentage": 0,
-            "offerTotalValue": 0
-          },
-          {
-            "name": "Chicken Burger",
-            "price": 9.99,
-            "image": "https://example.com/chicken-burger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 15,
-            "offerTotalValue": 8.49
+            "id": 2,
+            "category": "salads",
+            "name": "Ensalada Caprese",
+            "image": "https://example.com/ensalada_caprese.png",
+            "price": {
+              "normal": {
+                "value": 15000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.7,
+            "ingredients": [
+              {
+                "name": "Tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Albahaca fresca",
+                "quantity": 1
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              },
+              {
+                "name": "Vinagre balsámico",
+                "quantity": 0.5
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La ensalada Caprese es sencilla pero deliciosa, los ingredientes son de calidad.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Me encanta esta ensalada, el tomate y la mozzarella combinan a la perfección.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Una ensalada fresca y sabrosa, la albahaca fresca le da un toque especial.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Siempre pido la ensalada Caprese, el vinagre balsámico le da un sabor único.",
+                "rating": 5
+              }
+            ]
           }
         ],
         "additional": [
           {
-            "name": "Hamburguesa",
-            "price": 7.99,
-            "image": "https://example.com/hamburguesa.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 20,
-            "offerTotalValue": 6.39
+            "id": 1,
+            "category": "aditional",
+            "name": "Aderezo de Mostaza y Miel",
+            "image": "https://example.com/aderezo_mostaza_miel.png",
+            "price": {
+              "normal": {
+                "value": 5000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 4000
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Mostaza Dijon",
+                "quantity": 0.5
+              },
+              {
+                "name": "Miel",
+                "quantity": 1
+              },
+              {
+                "name": "Vinagre de manzana",
+                "quantity": 0.25
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 0.5
+              },
+              {
+                "name": "Sal",
+                "quantity": 0.1
+              },
+              {
+                "name": "Pimienta negra",
+                "quantity": 0.05
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Este aderezo es mi favorito, tiene un equilibrio perfecto entre lo dulce y lo salado.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "La mostaza y la miel se complementan muy bien en este aderezo, lo uso para muchas ensaladas.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Delicioso aderezo, le da un toque de sabor diferente a mis ensaladas.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me encanta este aderezo, lo uso para aderezar mis ensaladas y también como salsa para algunos platos.",
+                "rating": 4.5
+              }
+            ]
           },
           {
-            "name": "Cheeseburger",
-            "price": 8.99,
-            "image": "https://example.com/cheeseburger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": false,
-            "offerPercentage": 0,
-            "offerTotalValue": 0
-          },
-          {
-            "name": "Chicken Burger",
-            "price": 9.99,
-            "image": "https://example.com/chicken-burger.png",
-            "flavors": ["sencillo", "doble"],
-            "currency": "COP",
-            "hasOffer": true,
-            "offerPercentage": 15,
-            "offerTotalValue": 8.49
+            "id": 2,
+            "category": "aditional",
+            "name": "Salsa de Queso Cheddar",
+            "image": "https://example.com/salsa_queso_cheddar.png",
+            "price": {
+              "normal": {
+                "value": 3000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.7,
+            "ingredients": [
+              {
+                "name": "Queso cheddar rallado",
+                "quantity": 1
+              },
+              {
+                "name": "Leche",
+                "quantity": 0.5
+              },
+              {
+                "name": "Mantequilla",
+                "quantity": 0.25
+              },
+              {
+                "name": "Harina",
+                "quantity": 0.1
+              },
+              {
+                "name": "Sal",
+                "quantity": 0.05
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 0.05
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Esta salsa de queso cheddar es perfecta para las papas a la francesa, tiene un sabor intenso y delicioso.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Me encanta esta salsa de queso cheddar, le da un toque extra a mis papas a la francesa.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La salsa de queso cheddar es la mejor opción para acompañar las papas a la francesa, tiene un sabor increíble.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Nunca falta esta salsa de queso cheddar en mis papas a la francesa, es irresistible.",
+                "rating": 4.5
+              }
+            ]
           }
         ]
       },
-
       "images": [
         {
           "name": "photo1",
@@ -138,6 +691,28 @@
           "name": "photo5",
           "uri": "https://img.freepik.com/foto-gratis/camarero-feliz-sirviendo-comida-grupo-amigos-alegres-pub_637285-12525.jpg?w=1380&t=st=1681075146~exp=1681075746~hmac=da34e8494e38a40eab146d1b1fb405a6d18e36e544c013ec9b8ae0ce2c61dfd6"
         }
+      ],
+      "comments": [
+        {
+          "user": "Usuario1",
+          "comment": "¡Me encantó la hamburguesa! La carne estaba jugosa y los ingredientes frescos.",
+          "rating": 5
+        },
+        {
+          "user": "Usuario2",
+          "comment": "Buena hamburguesa, aunque la carne estaba un poco seca.",
+          "rating": 3
+        },
+        {
+          "user": "Usuario3",
+          "comment": "No fue lo que esperaba. El pan estaba duro y la carne tenía poco sabor.",
+          "rating": 2
+        },
+        {
+          "user": "Usuario4",
+          "comment": "Una hamburguesa deliciosa, definitivamente volveré por más.",
+          "rating": 5
+        }
       ]
     },
     "location": {
@@ -154,14 +729,670 @@
       "shortName": "El Rancho",
       "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
       "description": "Un asador tradicional con los mejores cortes de carne a la parrilla, perfecto para los amantes de la carne.",
+      "averageRating": 3.5,
       "menu": {
-        "burgers": {},
-        "pizzas": {},
-        "drinks": {},
-        "salads": {},
-        "additional": {}
+        "burgers": [
+          {
+            "id": 1,
+            "category": "burgers",
+            "name": "Hamburguesa Sencilla",
+            "image": "https://example.com/hamburguesa.png",
+            "price": {
+              "normal": {
+                "value": 25000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.0,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 2
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 1
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 1
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 2
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 3
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "¡Me encantó la hamburguesa! La carne estaba jugosa y los ingredientes frescos.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Buena hamburguesa, aunque la carne estaba un poco seca.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario3",
+                "comment": "No fue lo que esperaba. El pan estaba duro y la carne tenía poco sabor.",
+                "rating": 2
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una hamburguesa deliciosa, definitivamente volveré por más.",
+                "rating": 5
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "category": "burgers",
+            "name": "Hamburguesa Doble",
+            "image": "https://example.com/hamburguesa_doble.png",
+            "price": {
+              "normal": {
+                "value": 30000,
+                "hasOffer": false,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.5,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 3
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 2
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 2
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 2
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 3
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "¡La mejor hamburguesa que he probado! La carne estaba jugosa y los ingredientes bien equilibrados.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Una hamburguesa muy sabrosa, perfecta para los amantes de la carne.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Demasiado grande para mi gusto, pero la carne estaba bien cocida.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me encantó la combinación de sabores, definitivamente la recomiendo.",
+                "rating": 5
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "category": "burgers",
+            "name": "Big Bacon",
+            "image": "https://example.com/big_bacon.png",
+            "price": {
+              "normal": {
+                "value": 25000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 20000
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Pan de hamburguesa",
+                "quantity": 2
+              },
+              {
+                "name": "Carne de res molida",
+                "quantity": 1
+              },
+              {
+                "name": "Queso cheddar",
+                "quantity": 1
+              },
+              {
+                "name": "Tocino",
+                "quantity": 3
+              },
+              {
+                "name": "Lechuga",
+                "quantity": 1
+              },
+              {
+                "name": "Tomate",
+                "quantity": 2
+              },
+              {
+                "name": "Cebolla",
+                "quantity": 1
+              },
+              {
+                "name": "Pepinillos encurtidos",
+                "quantity": 2
+              },
+              {
+                "name": "Salsa de tomate (ketchup)",
+                "quantity": 1
+              },
+              {
+                "name": "Mostaza",
+                "quantity": 1
+              },
+              {
+                "name": "Mayonesa",
+                "quantity": 1
+              },
+              {
+                "name": "Sal",
+                "quantity": 1
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Me encanta el sabor del tocino en esta hamburguesa, ¡muy deliciosa!",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "La combinación de carne, queso y tocino es perfecta. Sin duda, la mejor opción para los amantes del tocino.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Un poco grasosa para mi gusto, pero el sabor es bueno.",
+                "rating": 3
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Esta hamburguesa es mi favorita, el tocino le da un toque especial.",
+                "rating": 5
+              }
+            ]
+          }
+        ],
+        "pizzas": [
+          {
+            "id": 1,
+            "category": "pizza",
+            "name": "Pizza Margarita",
+            "image": "https://example.com/pizza_margarita.png",
+            "price": {
+              "small": {
+                "value": 16000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "medium": {
+                "value": 22000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "large": {
+                "value": 28000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.5,
+            "ingredients": [
+              {
+                "name": "Masa de pizza",
+                "quantity": 1
+              },
+              {
+                "name": "Salsa de tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Queso mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Albahaca fresca",
+                "quantity": 1
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La pizza Margarita es clásica y deliciosa. La masa es fina y crujiente.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Muy buena pizza, la salsa de tomate y el queso mozzarella combinan perfectamente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La pizza Margarita es simple pero sabrosa. Me gusta la albahaca fresca encima.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una de mis pizzas favoritas, siempre la pido con extra de queso mozzarella.",
+                "rating": 5
+              }
+            ],
+            "sizes": ["small", "medium", "large"]
+          },
+          {
+            "id": 2,
+            "category": "pizza",
+            "name": "Pizza de Pepperoni",
+            "image": "https://example.com/pizza_pepperoni.png",
+            "price": {
+              "small": {
+                "value": 16000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "medium": {
+                "value": 22000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              },
+              "large": {
+                "value": 28000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Masa de pizza",
+                "quantity": 1
+              },
+              {
+                "name": "Salsa de tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Queso mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Pepperoni",
+                "quantity": 12
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La pizza de pepperoni es clásica y sabrosa. Me encanta el sabor del pepperoni.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Buena pizza de pepperoni, la masa es delgada y crujiente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La pizza de pepperoni es perfecta para los amantes de la carne. ¡Deliciosa!",
+                "rating": 5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Una pizza clásica que nunca falla. El pepperoni le da un sabor especial.",
+                "rating": 4
+              }
+            ],
+            "sizes": ["small", "medium", "large"]
+          }
+        ],
+        "salads": [
+          {
+            "id": 1,
+            "category": "salads",
+            "name": "Ensalada César",
+            "image": "https://example.com/ensalada_cesar.png",
+            "price": {
+              "normal": {
+                "value": 18000,
+                "hasOffer": true,
+                "offerPercentage": 10,
+                "offerTotalValue": 16200
+              }
+            },
+            "averageRating": 4.3,
+            "ingredients": [
+              {
+                "name": "Lechuga romana",
+                "quantity": 1
+              },
+              {
+                "name": "Pollo a la parrilla",
+                "quantity": 1
+              },
+              {
+                "name": "Queso parmesano rallado",
+                "quantity": 0.5
+              },
+              {
+                "name": "Salsa César",
+                "quantity": 1
+              },
+              {
+                "name": "Crutones",
+                "quantity": 0.5
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La ensalada César es deliciosa, me encanta la salsa y los crutones.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Muy buena ensalada, el pollo está bien sazonado y la salsa César es increíble.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Una ensalada clásica que siempre es una buena opción. Los crutones le dan un toque crujiente.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me gusta mucho la ensalada César, la lechuga romana es fresca y el queso parmesano la complementa bien.",
+                "rating": 4.5
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "category": "salads",
+            "name": "Ensalada Caprese",
+            "image": "https://example.com/ensalada_caprese.png",
+            "price": {
+              "normal": {
+                "value": 15000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.7,
+            "ingredients": [
+              {
+                "name": "Tomate",
+                "quantity": 1
+              },
+              {
+                "name": "Mozzarella",
+                "quantity": 1
+              },
+              {
+                "name": "Albahaca fresca",
+                "quantity": 1
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 1
+              },
+              {
+                "name": "Vinagre balsámico",
+                "quantity": 0.5
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "La ensalada Caprese es sencilla pero deliciosa, los ingredientes son de calidad.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Me encanta esta ensalada, el tomate y la mozzarella combinan a la perfección.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Una ensalada fresca y sabrosa, la albahaca fresca le da un toque especial.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Siempre pido la ensalada Caprese, el vinagre balsámico le da un sabor único.",
+                "rating": 5
+              }
+            ]
+          }
+        ],
+        "additional": [
+          {
+            "id": 1,
+            "category": "aditional",
+            "name": "Aderezo de Mostaza y Miel",
+            "image": "https://example.com/aderezo_mostaza_miel.png",
+            "price": {
+              "normal": {
+                "value": 5000,
+                "hasOffer": true,
+                "offerPercentage": 20,
+                "offerTotalValue": 4000
+              }
+            },
+            "averageRating": 4.2,
+            "ingredients": [
+              {
+                "name": "Mostaza Dijon",
+                "quantity": 0.5
+              },
+              {
+                "name": "Miel",
+                "quantity": 1
+              },
+              {
+                "name": "Vinagre de manzana",
+                "quantity": 0.25
+              },
+              {
+                "name": "Aceite de oliva",
+                "quantity": 0.5
+              },
+              {
+                "name": "Sal",
+                "quantity": 0.1
+              },
+              {
+                "name": "Pimienta negra",
+                "quantity": 0.05
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Este aderezo es mi favorito, tiene un equilibrio perfecto entre lo dulce y lo salado.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "La mostaza y la miel se complementan muy bien en este aderezo, lo uso para muchas ensaladas.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario3",
+                "comment": "Delicioso aderezo, le da un toque de sabor diferente a mis ensaladas.",
+                "rating": 4
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Me encanta este aderezo, lo uso para aderezar mis ensaladas y también como salsa para algunos platos.",
+                "rating": 4.5
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "category": "aditional",
+            "name": "Salsa de Queso Cheddar",
+            "image": "https://example.com/salsa_queso_cheddar.png",
+            "price": {
+              "normal": {
+                "value": 3000,
+                "hasOffer": false,
+                "offerPercentage": 0,
+                "offerTotalValue": 0
+              }
+            },
+            "averageRating": 4.7,
+            "ingredients": [
+              {
+                "name": "Queso cheddar rallado",
+                "quantity": 1
+              },
+              {
+                "name": "Leche",
+                "quantity": 0.5
+              },
+              {
+                "name": "Mantequilla",
+                "quantity": 0.25
+              },
+              {
+                "name": "Harina",
+                "quantity": 0.1
+              },
+              {
+                "name": "Sal",
+                "quantity": 0.05
+              },
+              {
+                "name": "Pimienta",
+                "quantity": 0.05
+              }
+            ],
+            "comments": [
+              {
+                "user": "Usuario1",
+                "comment": "Esta salsa de queso cheddar es perfecta para las papas a la francesa, tiene un sabor intenso y delicioso.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario2",
+                "comment": "Me encanta esta salsa de queso cheddar, le da un toque extra a mis papas a la francesa.",
+                "rating": 4.5
+              },
+              {
+                "user": "Usuario3",
+                "comment": "La salsa de queso cheddar es la mejor opción para acompañar las papas a la francesa, tiene un sabor increíble.",
+                "rating": 5
+              },
+              {
+                "user": "Usuario4",
+                "comment": "Nunca falta esta salsa de queso cheddar en mis papas a la francesa, es irresistible.",
+                "rating": 4.5
+              }
+            ]
+          }
+        ]
       },
-
       "images": [
         {
           "name": "photo1",
@@ -182,6 +1413,28 @@
         {
           "name": "photo5",
           "uri": "https://img.freepik.com/foto-gratis/camarero-feliz-sirviendo-comida-grupo-amigos-alegres-pub_637285-12525.jpg?w=1380&t=st=1681075146~exp=1681075746~hmac=da34e8494e38a40eab146d1b1fb405a6d18e36e544c013ec9b8ae0ce2c61dfd6"
+        }
+      ],
+      "comments": [
+        {
+          "user": "Usuario1",
+          "comment": "¡Me encantó la hamburguesa! La carne estaba jugosa y los ingredientes frescos.",
+          "rating": 5
+        },
+        {
+          "user": "Usuario2",
+          "comment": "Buena hamburguesa, aunque la carne estaba un poco seca.",
+          "rating": 3
+        },
+        {
+          "user": "Usuario3",
+          "comment": "No fue lo que esperaba. El pan estaba duro y la carne tenía poco sabor.",
+          "rating": 2
+        },
+        {
+          "user": "Usuario4",
+          "comment": "Una hamburguesa deliciosa, definitivamente volveré por más.",
+          "rating": 5
         }
       ]
     },

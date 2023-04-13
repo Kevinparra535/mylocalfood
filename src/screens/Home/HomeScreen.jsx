@@ -7,10 +7,12 @@ import {
   Pressable,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
   ActivityIndicator,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import PropTypes from "prop-types";
 
 // Contextos
@@ -25,6 +27,7 @@ import CategoriesSlider from "../../components/Home/CategoriesSlider";
 import ResturantsList from "../../components/Home/ResturantsList";
 import InputsForms from "../../components/Forms/InputsForms";
 import AdsSlider from "../../components/Home/AdsSlider";
+import FoodLists from "../../components/Home/FoodLists";
 
 // Navigations
 
@@ -61,7 +64,9 @@ const HomeScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       {loading === true ? (
-        <ActivityIndicator />
+        <SafeAreaView>
+          <ActivityIndicator />
+        </SafeAreaView>
       ) : (
         <ScrollView
           showsVerticalScrollIndicator={false}
@@ -87,6 +92,8 @@ const HomeScreen = () => {
             </View>
           </View>
 
+          <AdsSlider />
+
           <View style={styles.searchBar}>
             <InputsForms
               icon
@@ -102,7 +109,7 @@ const HomeScreen = () => {
 
           <CategoriesSlider />
 
-          <AdsSlider />
+          <FoodLists />
 
           <ResturantsList />
         </ScrollView>
@@ -153,7 +160,7 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    padding: Spacings.space,
+    paddingHorizontal: Spacings.space,
   },
 });
 

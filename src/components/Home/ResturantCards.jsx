@@ -49,9 +49,6 @@ const ResturantCards = ({ item }) => {
   };
 
   // UseEffects
-  useEffect(() => {
-    console.log(item);
-  }, [item]);
 
   // Renders
   return (

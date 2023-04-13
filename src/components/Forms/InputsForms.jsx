@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: Spacings.space,
     width: "100%",
     borderWidth: 1,
     borderColor: Colors.variants.one,
@@ -144,7 +143,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacings.space,
     width: "90%",
     ...Fonts.bodyText,
-    fontSize: 12,
+    fontSize: 14,
   },
 });
 

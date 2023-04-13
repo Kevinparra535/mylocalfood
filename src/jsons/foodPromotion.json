@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "category": "burgers",
+    "name": "Hamburguesa Sencilla",
+    "image": "https://img.freepik.com/foto-gratis/hamburguesa-vista-frontal-verduras-carne_23-2148868238.jpg?w=826&t=st=1681412688~exp=1681413288~hmac=3fb37a0bd8f7dafaf72e8bf2e00041b80f8694950e8f17898932bcf180004113",
+    "price": {
+      "normal": {
+        "value": 25000,
+        "hasOffer": true,
+        "offerPercentage": 20,
+        "offerTotalValue": 20000
+      }
+    },
+    "averageRating": 4.0,
+    "resturant": {
+      "id": 1,
+      "details": {
+        "name": "La Granja",
+        "logo": "https://img.freepik.com/vector-gratis/concepto-logo-restaurante-retro_23-2148496814.jpg?w=826&t=st=1680988205~exp=1680988805~hmac=b02d701aa0b3492d1ae5c2cd3deba5e385b8f26b6fc74f260e5dd8fb5b099f84",
+        "averageRating": 4.0
+      },
+      "location": {
+        "latitude": 3.8235036215168154,
+        "longitude": -76.5220061691495,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
+    "id": 2,
+    "category": "pizza",
+    "name": "Pizza Margarita",
+    "image": "https://img.freepik.com/foto-gratis/vista-lateral-pizza-pimiento-picado-utensilios-cocina_176474-3183.jpg?w=500&t=st=1681412424~exp=1681413024~hmac=6b407f286dd5a85ae778847f9ce7fb58fdf4b81b96d1069bdeb34896d61719e9",
+    "price": {
+      "small": {
+        "value": 16000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      },
+      "medium": {
+        "value": 22000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      },
+      "large": {
+        "value": 28000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      }
+    },
+    "averageRating": 4.5,
+    "resturant": {
+      "id": 1,
+      "details": {
+        "name": "La Granja",
+        "logo": "https://img.freepik.com/vector-gratis/concepto-logo-restaurante-retro_23-2148496814.jpg?w=826&t=st=1680988205~exp=1680988805~hmac=b02d701aa0b3492d1ae5c2cd3deba5e385b8f26b6fc74f260e5dd8fb5b099f84",
+        "averageRating": 4.0
+      },
+      "location": {
+        "latitude": 3.8235036215168154,
+        "longitude": -76.5220061691495,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
+    "id": 3,
+    "category": "salads",
+    "name": "Ensalada César",
+    "image": "https://img.freepik.com/foto-gratis/vista-cercana-deliciosas-verduras_23-2148478224.jpg?w=500&t=st=1681412473~exp=1681413073~hmac=af9d6ae20d2f03b6eb75708b3eb974c28876271411cebd89fef4046923f41fbb",
+    "price": {
+      "normal": {
+        "value": 18000,
+        "hasOffer": true,
+        "offerPercentage": 10,
+        "offerTotalValue": 16200
+      }
+    },
+    "averageRating": 4.3,
+    "resturant": {
+      "id": 1,
+      "details": {
+        "name": "La Granja",
+        "logo": "https://img.freepik.com/vector-gratis/concepto-logo-restaurante-retro_23-2148496814.jpg?w=826&t=st=1680988205~exp=1680988805~hmac=b02d701aa0b3492d1ae5c2cd3deba5e385b8f26b6fc74f260e5dd8fb5b099f84",
+        "averageRating": 4.0
+      },
+      "location": {
+        "latitude": 3.8235036215168154,
+        "longitude": -76.5220061691495,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
+    "id": 4,
+    "category": "burgers",
+    "name": "Hamburguesa Big Bacon",
+    "image": "https://img.freepik.com/foto-gratis/hamburguesa-alto-angulo-papas-fritas-mesa_23-2148678805.jpg?w=826&t=st=1681412642~exp=1681413242~hmac=9d0f4ca8c3e233f1fa05a367610d3bceae3098c5ffe26d6f7fddb3563dfd0b07",
+    "price": {
+      "normal": {
+        "value": 25000,
+        "hasOffer": true,
+        "offerPercentage": 20,
+        "offerTotalValue": 20000
+      }
+    },
+    "averageRating": 4.0,
+    "resturant": {
+      "id": 2,
+      "details": {
+        "name": "El Rancho",
+        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
+        "averageRating": 3.5
+      },
+      "location": {
+        "latitude": 3.8219823267489432,
+        "longitude": -76.52224858800318,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
+    "id": 5,
+    "category": "pizza",
+    "name": "Pizza Margarita",
+    "image": "https://img.freepik.com/foto-gratis/vista-lateral-pizza-cerrada-trapo-cuadros-tablero-redondo_176474-3046.jpg?w=826&t=st=1681412553~exp=1681413153~hmac=3720650b017190c7946a672c4b7eed4cf8af49f5317436182447c8932f39997d",
+    "price": {
+      "small": {
+        "value": 16000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      },
+      "medium": {
+        "value": 22000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      },
+      "large": {
+        "value": 28000,
+        "hasOffer": false,
+        "offerPercentage": 0,
+        "offerTotalValue": 0
+      }
+    },
+    "averageRating": 4.5,
+    "resturant": {
+      "id": 2,
+      "details": {
+        "name": "El Rancho",
+        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
+        "averageRating": 3.5
+      },
+      "location": {
+        "latitude": 3.8219823267489432,
+        "longitude": -76.52224858800318,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  },
+  {
+    "id": 6,
+    "category": "salads",
+    "name": "Ensalada con verduras",
+    "image": "https://img.freepik.com/foto-gratis/vista-superior-sabrosa-ensalada-verduras_23-2148515491.jpg?w=826&t=st=1681412586~exp=1681413186~hmac=507de9a7e6ec05d3f926e85f735a6f9bcbbaf6e92f7a0ea322d9037dcf190186",
+    "price": {
+      "normal": {
+        "value": 18000,
+        "hasOffer": true,
+        "offerPercentage": 10,
+        "offerTotalValue": 16200
+      }
+    },
+    "averageRating": 4.3,
+    "resturant": {
+      "id": 2,
+      "details": {
+        "name": "El Rancho",
+        "logo": "https://img.freepik.com/vector-gratis/ilustracion-bandera-sello-restaurante_53876-148.jpg?w=826&t=st=1680988256~exp=1680988856~hmac=8417de252f78a6a5ed28e40da03443855ebdf8c77b7336a2415e61d1e9c2438b",
+        "averageRating": 3.5
+      },
+      "location": {
+        "latitude": 3.8219823267489432,
+        "longitude": -76.52224858800318,
+        "latitudeDelta": 0.01,
+        "longitudeDelta": 0.01
+      }
+    }
+  }
+]

@@ -38,7 +38,6 @@ import Fonts from "../../assets/styles/Fonts";
 
 const AdsSlider = () => {
   // Estados
-  const [data, setData] = useState([]);
 
   // Contextos
 
@@ -47,7 +46,6 @@ const AdsSlider = () => {
   // Funciones
 
   // UseEffects
-  useEffect(() => {}, []);
 
   // Renders
   return (
@@ -105,7 +103,8 @@ AdsSlider.defaultProps = {};
 const styles = StyleSheet.create({
   scrollContainer: {
     paddingHorizontal: Spacings.space,
-    marginBottom: Spacings.space,
+    marginTop: Spacings.space,
+    marginBottom: Spacings.space_x2,
   },
 
   adsItem: {
