@@ -126,8 +126,8 @@ const MapScreen = () => {
                   >
                     <CustomCallOut
                       title={item.details.name}
-                      stars={item.details.rating}
-                      logo={item.details.images.logo}
+                      stars={item.details.averageRating}
+                      logo={item.details.logo}
                     />
                   </Callout>
                 </Marker>
