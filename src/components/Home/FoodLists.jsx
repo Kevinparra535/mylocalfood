@@ -1,6 +1,6 @@
 // Librerias
 import React, { useEffect, useState, useRef } from "react";
-import { FlatList, View, Text, StyleSheet, Pressable } from "react-native";
+import { FlatList, View, Text, StyleSheet, ScrollView } from "react-native";
 import { Link } from "@react-navigation/native";
 import Constants from "expo-constants";
 import PropTypes from "prop-types";
@@ -54,18 +54,25 @@ const FoodLists = () => {
         </Link>
       </View>
 
-      <FlatList
-        numColumns={2}
-        data={temporalData}
-        scrollEnabled={false}
-        style={styles.container}
-        onEndReachedThreshold={0.1}
-        keyExtractor={(item) => item.id}
-        columnWrapperStyle={styles.column}
-        showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => <FoodCards item={item} />}
-        contentContainerStyle={styles.flatListContentContainer}
-      />
+      <ScrollView
+        horizontal={true}
+        style={styles.scrollContainer}
+        showsHorizontalScrollIndicator={false}
+      >
+        <FlatList
+          numColumns={1}
+          horizontal={true}
+          data={temporalData}
+          scrollEnabled={false}
+          style={styles.container}
+          onEndReachedThreshold={0.1}
+          keyExtractor={(item) => String(item.id)}
+          // columnWrapperStyle={styles.column}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item }) => <FoodCards item={item} />}
+          contentContainerStyle={styles.flatListContentContainer}
+        />
+      </ScrollView>
     </View>
   );
 };

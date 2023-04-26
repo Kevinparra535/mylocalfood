@@ -17,7 +17,14 @@ const Fonts = {
 
   heading3: {
     fontSize: 22,
-    fontFamily: 'poppins-bold',
+    fontFamily: 'poppins-semibold',
+    lineHeight: 25,
+    color: Colors.oscuro,
+  },
+
+  heading4: {
+    fontSize: 22,
+    fontFamily: 'poppins-medium',
     lineHeight: 25,
     color: Colors.oscuro,
   },

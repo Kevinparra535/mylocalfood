@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
-  StyleSheet,
   Image,
   Pressable,
+  StyleSheet,
   ScrollView,
 } from "react-native";
 import {
@@ -166,7 +166,7 @@ const RestaurantDetailsScreen = ({ navigation, route }) => {
 
           <View style={styles.row}>
             <Text style={styles.label}>
-              Horario: 6pm a 1am |{" "}
+              Horario: 6 pm a 1 am |{" "}
               <Text style={[styles.label, { color: Colors.alerts.check }]}>
                 Abierto
               </Text>
@@ -205,7 +205,6 @@ const RestaurantDetailsScreen = ({ navigation, route }) => {
         </View>
 
         {/* Menu */}
-        <Text>Menu</Text>
       </ScrollView>
 
       {/* Boton flotante */}

@@ -54,13 +54,14 @@ const FoodCards = ({ item }) => {
 
   // Funciones
   const handleClick = () => {
-    navigation.navigate("RestaurantDetailsScreen", { id: item.id });
+    navigation.navigate("FoodDetailsScreen", {
+      id: item.id,
+      category: item.category,
+    });
   };
 
   // UseEffects
-  useEffect(() => {
-    console.log(item);
-  }, [item]);
+
 
   // Renders
   return (
@@ -115,8 +116,7 @@ FoodCards.defaultProps = {};
 const styles = StyleSheet.create({
   card: {
     padding: Spacings.space_half,
-    marginHorizontal: 5,
-    marginBottom: Spacings.space,
+    marginRight: Spacings.space,
     borderRadius: Spacings.space_half,
     width,
     backgroundColor: getOpacity(Colors.claro, 1),
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   label: {
     ...Fonts.bodyText,
     fontSize: 10,
-    color: Colors.variants.one
+    color: Colors.variants.one,
   },
 
   location: {

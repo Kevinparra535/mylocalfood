@@ -2,13 +2,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
   ActivityIndicator,
-  Animated,
   FlatList,
-  Easing,
+  ScrollView,
   View,
   Text,
   StyleSheet,
-  Pressable,
 } from "react-native";
 import { Link } from "@react-navigation/native";
 import Lottie from "lottie-react-native";
@@ -63,16 +61,23 @@ const ResturantsList = () => {
         </Link>
       </View>
 
-      <FlatList
-        numColumns={1}
-        data={temporalData}
-        scrollEnabled={false}
-        onEndReachedThreshold={0.1}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => String(item.id)}
-        contentContainerStyle={styles.flatListContentContainer}
-        renderItem={({ item }) => <ResturantCards item={item} />}
-      />
+      <ScrollView
+        horizontal={true}
+        style={styles.scrollContainer}
+        showsHorizontalScrollIndicator={false}
+      >
+        <FlatList
+          numColumns={1}
+          horizontal={true}
+          data={temporalData}
+          scrollEnabled={false}
+          onEndReachedThreshold={0.1}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(item) => String(item.id)}
+          contentContainerStyle={styles.flatListContentContainer}
+          renderItem={({ item }) => <ResturantCards item={item} />}
+        />
+      </ScrollView>
     </View>
   );
 };

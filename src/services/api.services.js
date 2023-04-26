@@ -2,7 +2,6 @@ const api = {
   login: {
     async sigIn(email, password) {
       try {
-        console.log(user);
         return user;
       } catch (error) {
         const errorCode = error.code;
@@ -13,7 +12,6 @@ const api = {
 
     async signUp(email, password) {
       try {
-        console.log(user);
         return user;
       } catch (error) {
         const errorCode = error.code;

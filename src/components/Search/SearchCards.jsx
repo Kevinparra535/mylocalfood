@@ -85,7 +85,7 @@ SearchCards.defaultProps = {};
 const styles = StyleSheet.create({
   card: {
     padding: Spacings.space,
-    marginBottom: Spacings.space_x2,
+    marginBottom: Spacings.space,
     display: "flex",
     flexDirection: "row",
     borderRadius: Spacings.space_half,

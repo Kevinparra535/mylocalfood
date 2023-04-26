@@ -101,13 +101,13 @@ ResturantCards.defaultProps = {};
 const styles = StyleSheet.create({
   resturantCard: {
     paddingBottom: Spacings.space,
-    marginBottom: Spacings.space_x2,
-    borderRadius: Spacings.space,
+    marginRight: Spacings.space,
+        borderRadius: Spacings.space_half,
     backgroundColor: getOpacity(Colors.claro, 1),
   },
 
   resturantImage: {
-    borderRadius: Spacings.space,
+        borderRadius: Spacings.space_half,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
     width: "100%",
@@ -116,6 +116,8 @@ const styles = StyleSheet.create({
   },
 
   image: {
+    borderTopLeftRadius: Spacings.space,
+    borderTopRightRadius: Spacings.space,
     width: "100%",
     height: "100%",
   },

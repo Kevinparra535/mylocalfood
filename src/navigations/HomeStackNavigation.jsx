@@ -12,6 +12,7 @@ import PropTypes from "prop-types";
 // Screens
 import HomeScreen from "../screens/Home/HomeScreen";
 import RestaurantDetailsScreen from "../screens/Home/RestaurantDetailsScreen";
+import FoodDetailsScreen from "../screens/Home/FoodDetailsScreen";
 
 // Componentes
 
@@ -56,6 +57,11 @@ const HomeStackNavigation = () => {
       <HomeStack.Screen
         name="RestaurantDetailsScreen"
         component={RestaurantDetailsScreen}
+      />
+
+      <HomeStack.Screen
+        name="FoodDetailsScreen"
+        component={FoodDetailsScreen}
       />
 
       <HomeStack.Screen

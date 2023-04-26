@@ -13,7 +13,7 @@
             "id": 1,
             "category": "burgers",
             "name": "Hamburguesa Sencilla",
-            "image": "https://example.com/hamburguesa.png",
+            "image": "https://img.freepik.com/foto-gratis/hamburguesa-vista-frontal-verduras-carne_23-2148868238.jpg?w=826&t=st=1681412688~exp=1681413288~hmac=3fb37a0bd8f7dafaf72e8bf2e00041b80f8694950e8f17898932bcf180004113",
             "price": {
               "normal": {
                 "value": 25000,
@@ -278,7 +278,7 @@
         "pizzas": [
           {
             "id": 1,
-            "category": "pizza",
+            "category": "pizzas",
             "name": "Pizza Margarita",
             "image": "https://example.com/pizza_margarita.png",
             "price": {
@@ -350,7 +350,7 @@
           },
           {
             "id": 2,
-            "category": "pizza",
+            "category": "pizzas",
             "name": "Pizza de Pepperoni",
             "image": "https://example.com/pizza_pepperoni.png",
             "price": {
@@ -1001,7 +1001,7 @@
         "pizzas": [
           {
             "id": 1,
-            "category": "pizza",
+            "category": "pizzas",
             "name": "Pizza Margarita",
             "image": "https://example.com/pizza_margarita.png",
             "price": {
@@ -1073,7 +1073,7 @@
           },
           {
             "id": 2,
-            "category": "pizza",
+            "category": "pizzas",
             "name": "Pizza de Pepperoni",
             "image": "https://example.com/pizza_pepperoni.png",
             "price": {
