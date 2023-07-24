@@ -40,7 +40,9 @@ Aplicación ReactJS con estructura de carpetas intermedia. Artículo completo do
 
 - [Guia de estilos](https://github.com/Kevinparra535/design-sytem-and-gitflow/tree/master#guia-de-estilos)
 
-![landing screenshot]('/screenshots/)
+![landing screenshot](/screenshots/Screenshot.png)
+![landing screenshot](/screenshots/Screenshot1.png)
+![landing screenshot](/screenshots/Screenshot2.png)
 
 ## Getting started
 
