@@ -1,4 +1,4 @@
-# CMS RRHH APP Mobile
+# MY LOCAL FOOD - PROTOTYPE
 
 ## Correr el proyecto
 
